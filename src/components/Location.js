@@ -1,7 +1,12 @@
 import React from 'react';
 
-const Location = () => (
-    <div><h1>Santiago</h1></div>
-)
+                //Destructuring
+const Location = ({ city }) => {
+   // Normal   
+  //  const city = props.city
+
+    return (
+        <div><h1>{city}</h1></div>)
+};
 
 export default Location;
