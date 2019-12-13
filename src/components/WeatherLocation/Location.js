@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import '../styles.css';
 
                 //Destructuring
 const Location = ({ city }) => {
-   // Normal   
   //  const city = props.city
 
     return (
-        <div><h1>{city}</h1></div>)
+        <div className="locationCont">
+          <h1> {city} </h1>
+        </div>)
 };
 
 Location.propTypes = {
