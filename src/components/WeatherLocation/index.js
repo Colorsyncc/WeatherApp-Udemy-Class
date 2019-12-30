@@ -30,7 +30,7 @@ class WeatherLocation extends Component {
       }
 
   handleUpdateClick = () => {
-    //getUrlWeatherByCity espera el parametro indicado que es city desde el estado
+    //getUrlWeatherByCity espera el parametro indicado que es city desde su estado
     const api_weather = getUrlWeatherByCity(this.state.city);
 
     fetch(api_weather).then( resolve => {

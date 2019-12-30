@@ -7,7 +7,6 @@ import './styles.css';
 const WeatherData = ({ data: { temperature, weatherState, humidity, wind } }) => {
   // Sin destructuring
   //const { temperature, weatherState, humidity, wind } = data;
-
   return(
     <div className="weatherDataCont">
         <WeatherTemperature 
@@ -26,6 +25,5 @@ WeatherData.propTypes = {
     wind: PropTypes.string.isRequired
   })
 }
-
 
 export default WeatherData; 
