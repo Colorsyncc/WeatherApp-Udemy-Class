@@ -36,7 +36,7 @@ class WeatherLocation extends Component {
     fetch(api_weather).then( resolve => {
         return resolve.json();
     }).then( data => {
-      console.log("Resultado del handleUpdateClick");
+      console.log("Resultado del handleUpdateClick:");
       const newWeather = transformWeather(data);
       console.log(newWeather);
 
@@ -50,9 +50,10 @@ class WeatherLocation extends Component {
   render() {
     console.log("Render");
     const { city,data } = this.state;
+    const { onWeatherLocationClick } = this.props;
 
     return (
-      <div className="weatherLocationCont">
+      <div className="weatherLocationCont" onClick={onWeatherLocationClick}>
       <Location city={city}/>
       { data ? <WeatherData data={data}/> : <CircularProgress size={50}/>}
   </div>
@@ -62,5 +63,6 @@ class WeatherLocation extends Component {
 
 WeatherLocation.porpTypes = {
   city: PropTypes.string.isRequired,
+  onWeatherLocationClick: PropTypes.func,
 }
 export default WeatherLocation;
