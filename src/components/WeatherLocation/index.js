@@ -15,19 +15,13 @@ class WeatherLocation extends Component {
     this.state = {
       city,
       data: null,
-    }
-    console.log("Constructor");
-    
+    }    
   }
 
   componentDidMount() {
     console.log("ComponentDidMount");
     this.handleUpdateClick();
   }
-
-  componentDidUpdate(prevProps, prevState) {
-      console.log("componentDidUpdate");
-      }
 
   handleUpdateClick = () => {
     //getUrlWeatherByCity espera el parametro indicado que es city desde su estado
@@ -36,7 +30,6 @@ class WeatherLocation extends Component {
     fetch(api_weather).then( resolve => {
         return resolve.json();
     }).then( data => {
-      console.log("Resultado del handleUpdateClick:");
       const newWeather = transformWeather(data);
       console.log(newWeather);
 
@@ -48,7 +41,6 @@ class WeatherLocation extends Component {
   }
 
   render() {
-    console.log("Render");
     const { city,data } = this.state;
     const { onWeatherLocationClick } = this.props;
 
