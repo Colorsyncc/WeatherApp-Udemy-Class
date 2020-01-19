@@ -8,6 +8,7 @@ const data = {
   weatherState: 'normal',
   wind:'normal',
 }
+
 const ForecastItem = ({ weekDay, hour }) => (
   <div>
     <div>

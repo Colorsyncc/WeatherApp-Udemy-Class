@@ -17,10 +17,10 @@ const LocationList = ({ cities, onSelectedLocation }) => {
         onWeatherLocationClick = { () => handleWeatherLocationClick(city) }
         />))
   );
-  
+
   return(
     <div className="locationList">
-      {strComponents(cities)}
+      {strComponents(cities)}      
     </div>)
 };
 

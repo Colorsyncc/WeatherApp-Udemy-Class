@@ -10,6 +10,8 @@ import '../styles.css';
 class WeatherLocation extends Component {
   constructor(props) {
     super(props);
+    //Esta props la recive desde getUrlWeatherByCity por eso se utiliza props como parametro
+    //en el constructor y el super, para poder recibir la props de otro componente y manejarlo
     const { city } = props;
 
     this.state = {
@@ -20,10 +22,10 @@ class WeatherLocation extends Component {
 
   componentDidMount() {
     console.log("ComponentDidMount");
-    this.handleUpdateClick();
+    this.handleUpdate();
   }
 
-  handleUpdateClick = () => {
+  handleUpdate = () => {
     //getUrlWeatherByCity espera el parametro indicado que es city desde su estado
     const api_weather = getUrlWeatherByCity(this.state.city);
 
